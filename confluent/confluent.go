@@ -1,6 +1,7 @@
 package confluent
 
 import (
+	"context"
 	"crypto/tls"
 	"encoding/base64"
 	"encoding/json"
@@ -106,9 +107,9 @@ func WithParam(key, value string) func(*ClientRequest) {
 	}
 }
 
-func Get[T any](url string, ops ...func(*ClientRequest)) (*T, error) {
+func HttpGet[T any](ctx context.Context, url string, ops ...func(*ClientRequest)) (*T, error) {
 
-	req, err := http.NewRequest(http.MethodGet, url, nil)
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, url, nil)
 	if err != nil {
 		return nil, err
 	}
