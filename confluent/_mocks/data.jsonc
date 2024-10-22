@@ -1,0 +1,123 @@
+{
+    "api_version": "org/v2",
+    "kind": "EnvironmentList",
+    "metadata": {},
+    "data": [
+      {
+        "api_version": "org/v2",
+        "kind": "Environment",
+        "id": "osiris",
+        "metadata": {
+          "self": "http://localhost:40097/osiris"
+        },
+        "stream_governance_config": {
+          "package": "ESSENTIALS"
+        }
+      },
+
+      {
+        "api_version": "org/v2",
+        "kind": "Environment",
+        "id": "sobek",
+        "metadata": {
+          "self": "http://localhost:40097/sobek"
+        },
+        "stream_governance_config": {
+          "package": "ESSENTIALS"
+        }
+      }
+    ]
+  }
+// no prod
+{
+  "api_version": "cmk/v2",
+  "data": [
+    {
+      "api_version": "cmk/v2",
+      "id": "osirisddd",
+      "metadata": {},
+      "spec": {
+        "display_name": "odin-confluent-dev-nopci-cluster-8876",
+        "kafka_boostrap_endpoint": "private.kafka.sql:9092",
+        "region": "us-west-2"
+      }
+    },
+    {
+      "api_version": "cmk/v2",
+      "id": "osirisccc",
+      "metadata": {},
+      "spec": {
+        "display_name": "odin-confluent-dev-pci-cluster-1959",
+        "kafka_boostrap_endpoint": "private.kafka.gitlab:9092",
+        "region": "us-west-2"
+      }
+    },
+    {
+      "api_version": "cmk/v2",
+      "id": "osirisbbb",
+      "metadata": {},
+      "spec": {
+        "display_name": "odin-confluent-qa-nopci-cluster-2888",
+        "kafka_boostrap_endpoint": "private.kafka.drupal:9092",
+        "region": "us-west-2"
+      }
+    },
+    {
+      "api_version": "cmk/v2",
+      "id": "osirisaaa",
+      "metadata": {},
+      "spec": {
+        "display_name": "odin-confluent-qa-pci-cluster-8876",
+        "kafka_boostrap_endpoint": "private.kafka.web-development:9092",
+        "region": "us-west-2"
+      }
+    }
+  ]
+}
+
+// prod
+{
+  "api_version": "cmk/v2",
+  "data": [
+    {
+      "api_version": "cmk/v2",
+      "id": "sobekddd",
+      "metadata": {},
+      "spec": {
+        "display_name": "odin-confluent-uat-nopci-cluster-8876",
+        "kafka_boostrap_endpoint": "private.kafka.optimization:9092",
+        "region": "us-west-2"
+      }
+    },
+    {
+      "api_version": "cmk/v2",
+      "id": "sobekccc",
+      "metadata": {},
+      "spec": {
+        "display_name": "odin-confluent-uat-pci-cluster-1959",
+        "kafka_boostrap_endpoint": "private.kafka.frontend:9092",
+        "region": "us-west-2"
+      }
+    },
+    {
+      "api_version": "cmk/v2",
+      "id": "sobekbbb",
+      "metadata": {},
+      "spec": {
+        "display_name": "odin-confluent-prd-nopci-cluster-2888",
+        "kafka_boostrap_endpoint": "private.kafka.backend:9092",
+        "region": "us-west-2"
+      }
+    },
+    {
+      "api_version": "cmk/v2",
+      "id": "sobekaaa",
+      "metadata": {},
+      "spec": {
+        "display_name": "odin-confluent-prd-pci-cluster-8876",
+        "kafka_boostrap_endpoint": "private.kafka.library:9092",
+        "region": "us-west-2"
+      }
+    }
+  ]
+}
